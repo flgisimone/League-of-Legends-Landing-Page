@@ -33,7 +33,7 @@ a{
     background-color: #DFCA81;
     width: 100%;
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .containerMenu{
@@ -712,7 +712,6 @@ footer{
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
-        z-index: -9999;
     }
 
     @keyframes imgLegend {
