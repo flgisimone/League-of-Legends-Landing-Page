@@ -24,15 +24,23 @@ btnClose.addEventListener("click", () =>{
     hero.style="padding-top:140px;"
 })
 
-for (let i = 0; i < liMenu.length; i++) {
-liMenu[i].addEventListener("click", () => {
-    btnOpen.style="display:block;"
-    btnClose.style="display:none;"
-    navMenu.style="display:none;"
-    containerMenu.style="align-items:center;"
-    hero.style="padding-top:140px;"
-})}
-
+function menuMobile(x){
+    if (x.matches){
+        for (let i = 0; i < liMenu.length; i++) {
+            liMenu[i].addEventListener("click", () => {
+                btnOpen.style="display:block;"
+                btnClose.style="display:none;"
+                navMenu.style="display:none;"
+                containerMenu.style="align-items:center;"
+                hero.style="padding-top:140px;"
+            })}}
+            else{
+                console.log("Menu funzionante")
+            }
+        }
+const x = window.matchMedia("(max-width:767px")
+menuMobile(x)
+x.addListener(menuMobile)
 
 //---------------------------------------------//
 
