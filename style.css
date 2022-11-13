@@ -2,10 +2,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Spiegel", "Arial Narrow", Arial, sans-serif;
+    letter-spacing: 1px;
 }
 
 body{
-    background-color: black;
+    width: 100%;
+    position: relative;
 }
 
 a{
@@ -27,62 +29,86 @@ a{
     border-radius: 5px;
   }
 
-header{
+.headerMenu{
+    background-color: #DFCA81;
     width: 100%;
-    background: rgb(223,202,129);
-    background: radial-gradient(circle, rgba(223,202,129,1) 0%, rgba(255,255,255,1) 100%);
+    position: fixed;
 }
 
-.navbar{
-    width: 100%;
+.containerMenu{
+    width: 90%;
     margin: auto;
-    padding: 20px 0;
+    padding: 20px;
+    display: flex;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(223,202,129,1) 100%);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerMenu .logo .imglogo{
+    width: 60px;
+}
+
+.menu{
+    display: flex;
+    gap: 15px;
+}
+
+.menu .navMenu{
+    display: none;
+}
+
+.menu .navMenu .ulMenu{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    background: rgb(223,202,129);
-    background: radial-gradient(circle, rgba(223,202,129,1) 0%, rgba(255,255,255,1) 100%);
-}
-
-.logo .logo__Header{
-    width: 60px;
-    margin-bottom: 20px;
-    display: flex;
-}
-
-.menu ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     list-style-type: none;
-    margin: 0px;
     padding: 0px;
-    gap: 20px;
-  }
-  
-.menu ul li{
-    width: 100px;
-    padding: 5px 0;
-    background-color: #00B2CF;
-    text-align: center;
-    font-size: 20px;
     font-weight: bold;
-    letter-spacing: 1.5px;
+    font-size: 18px;
+    gap: 10px;
+}
+
+.menu .navMenu .ulMenu .liMenu{
+    background-color: #00B2CF;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
-  }
+    padding: 4px;
+}
+
+.menu .navMenu .ulMenu .liMenu a{
+    margin: 0 5px;
+}
+
+.btnOpen,
+.btnClose{
+    background-color:#00B2CF;
+    border-radius: 5px;
+    border: none;
+}
+
+.btnClose{
+    display: none;
+}
+
+.btnImgOpen,
+.btnImgClose{
+    width: 30px;
+}
+
+.containerHero{
+    width: 100%;
+    background: rgb(58,78,89);
+background: radial-gradient(circle, rgba(58,78,89,1) 0%, rgba(0,0,0,1) 100%);
+}
 
 .hero{
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px 0;
-    padding-top: 200px;
+    padding-top: 140px;
 }
 
 .info__Hero{
@@ -117,7 +143,6 @@ header{
     width: 150px;
     color: black;
     font-weight: bold;
-    letter-spacing: 1.5px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     cursor: pointer;
@@ -162,7 +187,6 @@ header{
 
 .map h2{
     color: white;
-    letter-spacing: 1.5px;
 }
 
 .map img{
@@ -173,7 +197,6 @@ header{
 .map p{
     color: white;
     font-size: 18px;
-    letter-spacing: 1.5px;
     margin-bottom:20px;
 }
 
@@ -208,182 +231,128 @@ header{
     color: grey;
 }
 
-.nav__Champion{
+.navChampion{
     width: 100%;
-    border-top: 1px solid #DFCA81;
-    border-bottom: 1px solid #DFCA81;
-    padding: 10px 0;
-    margin: 10px 0;
-    overflow-x: scroll;
-    -ms-overflow-style: none; 
-    scrollbar-width: none; 
-}
-
-.nav__Champion::-webkit-scrollbar {
-    display: none; 
-}
-
-.nav__Champion ul{
-    margin: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    gap: 0 20px;
-    font-weight: 600;
-}
-
-.nav__Champion ul li{
-    width: 150px;
-    padding: 10px 20px;
-    border: none;
-    background-color: transparent;
-    color: grey;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-}
-
-.fighterSection{
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-}
-
-.fighterSection span{
-    font-size: 30px;
-    color: #DFCA81;
-    display: block;
-    padding: 10px;
-    text-align: left;
-}
-
-.divFighter{
-    display: flex;
-    overflow-x: scroll;
-    gap: 20px;
-}
-
-.assassinSection{
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-}
-
-.assassinSection span{
-    font-size: 30px;
-    color: #DFCA81;
-    display: block;
-    padding: 10px;
-    text-align: left;
-}
-
-.divAssassin{
-    display: flex;
-    overflow-x: scroll;
-    gap: 20px;
-}
-
-.mageSection{
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-}
-
-.mageSection span{
-    font-size: 30px;
-    color: #DFCA81;
-    display: block;
-    padding: 10px;
-    text-align: left;
-}
-
-.divMage{
-    display: flex;
-    overflow-x: scroll;
-    gap: 20px;
-}
-
-.marksmanSection{
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-}
-
-.marksmanSection span{
-    font-size: 30px;
-    color: #DFCA81;
-    display: block;
-    padding: 10px;
-    text-align: left;
-}
-
-.divMarksman{
-    display: flex;
-    overflow-x: scroll;
-    gap: 20px;
-}
-
-.supportSection{
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-}
-
-.supportSection span{
-    font-size: 30px;
-    color: #DFCA81;
-    display: block;
-    padding: 10px;
-    text-align: left;
-}
-
-.divSupport{
-    display: flex;
-    overflow-x: scroll;
-    gap: 20px;
-}
-
-.tankSection{
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-}
-
-.tankSection span{
-    font-size: 30px;
-    color: #DFCA81;
-    display: block;
-    padding: 10px;
-    text-align: left;
-}
-
-.divTank{
-    display: flex;
-    overflow-x: scroll;
-    gap: 20px;
-}
-
-.card{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid #DFCA81;
+    border-bottom: 1px solid #DFCA81;
+    padding: 15px 0;
 }
 
-.card span{
+.navChampion .navChampionUl::-webkit-scrollbar {
+    display: none;
+}
+
+.navChampion .navChampionUl{
+    display: flex;
+    list-style-type: none;
+    margin: 0 12px;
+    padding: 0;
+    gap: 40px;
+    font-weight: 600;
+    overflow-x: none;
+    overflow-x: scroll;
+}
+
+.imgScroll img{
+    width: 40px;
+    margin: 7px 0;
+    position: relative;
+    animation: scrolling 4.5s infinite;
+}
+
+@keyframes scrolling {
+    0%,
+    100% {
+      left: -25px;
+    }
+  
+    50% {
+      left: 50px;
+    }
+  }
+
+.navChampion .navChampionUl button{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px 0;
     color: grey;
-    font-size: 18px;
-    text-align: center;
-    width: 150px;
+    font-size: 19px;
 }
 
-.card img{
+.navChampionLi button:hover{
+    font-size: 20px;
+}
+
+.navChampionLi button:focus{
+    color: #DFCA81;
+    font-size: 28px;
+}
+
+
+.sectionChampion{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardChampion{
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+.cardChampion .imgClass{
+    width: 80px;
+}
+
+.divFighter,
+.divAssassin,
+.divMage,
+.divMarksman,
+.divSupport,
+.divTank{
+    display: flex;
+    overflow-x: hidden;
+    overflow-x: scroll;
+    gap: 30px;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardFighter,
+.cardAssassin,
+.cardMage,
+.cardMarksman,
+.cardSupport,
+.cardTank{
+    width: 125px;
+    margin: 5px 10px;
+}
+
+.cardChampion span{
+    width: inherit;
+    font-size: 16.7px;
+    padding: 20px 0;
+}
+
+.cardChampion img{
+    width: inherit;
     width: 120px;
-    margin-bottom: 5px;
+    margin: 10px 0;
+}
+
+.assassin,
+.mage,
+.marksman,
+.support,
+.tank{
+    display: none;
 }
 
 .legend{
@@ -413,7 +382,7 @@ header{
 }
 
 .imgLegend{
-    width: 390px;
+    width: 350px;
     margin-bottom: 30px;
     animation-name: imgLegend;
     animation-duration: 3s;
@@ -446,7 +415,6 @@ header{
 .legend__Info p{
     color: white;
     font-size: 18px;
-    letter-spacing: 1.5px;
     margin-bottom: 20px;
 }
 
@@ -461,51 +429,70 @@ footer{
 
 @media screen and (min-width: 768px) {
 
-    .navbar{
-        padding: 0px;
+    ::-webkit-scrollbar {
+        height: 0;
+      }
+       
+    ::-webkit-scrollbar-track {
+        background-color: black;
+        border-radius: 0px;
+      }
+       
+     ::-webkit-scrollbar-thumb {
+        background-color: #DFCA81;
+        border-radius: 0px;
+      }
+
+    .headerMenu{
+        background-color: #DFCA81;
+        width: 100%;
+    }
+    
+    .containerMenu{
+        width: 1350px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(223,202,129,1) 100%);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu .navMenu{
+        display: block;
+    }
+
+    .menu .navMenu .ulMenu{
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-around;
     }
 
-    .logo .logo__Header{
-        width: 80px;
-        margin: 20px 0;
-        display: flex;
-    }
-
-    .menu ul{
-        display: flex;
-        list-style-type: none;
-        margin: 0px;
-        padding: 0px;
-        gap: 50px;
-      }
-      
-      .menu ul li{
-        width: 125px;
-        padding: 5px 0;
-        background-color: #00B2CF;
+    .menu .navMenu .ulMenu .liMenu{
+        width: 100px;
+        padding: 10px;
         text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-        letter-spacing: 1.5px;
-        border-bottom-right-radius: 10px;
-        border-top-left-radius: 10px;
-      }
+        font-size: 17px;
+    }
+
+    .btn{
+        display: none;
+    }
+
+    .containerHero{
+        background: rgb(58,78,89);
+        background: radial-gradient(circle, rgba(58,78,89,1) 0%, rgba(0,0,0,1) 100%);
+    }
 
     .hero{
-        background-color: black;
+        width: 1350px;
+        margin: auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         padding: 100px 0;
         padding-top: 200px;
-        width: 1350px;
-        margin: auto;
         justify-content: space-evenly;
     }
     
@@ -546,13 +533,29 @@ footer{
         box-shadow: 0px 0px 2px 2px #DFCA81;
     }
 
+    .mapSection .span1 {
+        width: 1350px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .mapSection .span2{
+        width: 1350px;
+        margin: auto;
+        text-align: center;
+    }
+
     .choose__Champion .span1{
         font-size: 40px;
+        width: 1350px;
+        margin: auto;
     }
     
     .choose__Champion .span2{
         font-size: 70px;
         color: #DFCA81;
+        width: 1350px;
+        margin: auto;
     }
     
     .choose__Champion .span3{
@@ -561,8 +564,12 @@ footer{
         padding: 20px 0;
         font-size: "Spiegel", "Arial Narrow", Arial, sans-serif;;
     }
+    
+    .navChampion{
+        margin: 30px 0;
+    }
 
-    .nav__Champion ul{
+    .navChampionUl{
         margin: auto;
         display: flex;
         justify-content: center;
@@ -570,13 +577,82 @@ footer{
         list-style-type: none;
         margin: 0;
         padding: 0;
-        gap: 0 20px;
+        gap: 20px;
         font-family: "Spiegel", "Arial Narrow", Arial, sans-serif;
         font-weight: 600;
     }
 
-    .divFighter{
-        overflow-x: scroll;
+    .navChampionLi button{
+        cursor: pointer;
+    }
+
+    .navChampionLi button:hover{
+        font-size: 20px;
+    }
+
+    .navChampionLi button:focus{
+        color: #DFCA81;
+        font-size: 28px;
+    }
+
+    .imgScroll{
+        display: none;
+    }
+
+    .sectionChampion{
+        width: 1350px;
+        margin: auto;
+    }
+
+    .sectionChampion span{
+        padding: 0;
+    }
+
+    .sectionChampion img{
+        padding: 5px 0;
+    }
+
+    .divFighter,
+    .divAssassin,
+    .divMage,
+    .divMarksman,
+    .divSupport,
+    .divTank{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cardFighter,
+    .cardAssassin,
+    .cardMage,
+    .cardMarksman,
+    .cardSupport,
+    .cardTank{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardChampion{
+        margin: 0;
+        font-size: 17px;
+    }
+
+    .cardChampion span{
+        width: inherit;
+        font-size: 17.5px;
+    }
+    
+    .cardChampion img{
+        width: inherit;
+        width: 110px;
+        margin: 10px 0;
     }
 
     .mapSection{
@@ -584,7 +660,7 @@ footer{
         display: flex;
         flex-direction: column;
         background: rgb(58,78,89);
-        background: radial-gradient(circle, rgba(58,78,89,1) 0%, rgba(0,0,0,1) 100%);
+        background: radial-gradient(circle, #3a4e59 0%, rgba(0,0,0,1) 100%);
         box-shadow: 0px 0px 2px 2px #DFCA81;
     }
 
@@ -660,7 +736,14 @@ footer{
     .legend__Info p{
         color: white;
         font-size: 18px;
-        letter-spacing: 1.5px;
         margin-bottom: 20px;
+    }
+
+    .modal{
+        border: 1px solid red;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(0%, -50%);
     }
 }

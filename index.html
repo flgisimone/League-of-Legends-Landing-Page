@@ -11,37 +11,43 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 </head>
 <body>
-    <header>
-        <div class="navbar">
+    <header class="headerMenu">
+        <div class="containerMenu">
             <div class="logo">
-                <img src="./assets/logoheader.png" alt="logo Header" class="logo__Header">
+                <a href="\"><img src="./assets/logoheader.png" alt="logo leagueoflegends" class="imglogo"></a>
             </div>
             <div class="menu">
-                <nav>
-                    <ul>
-                        <li><a href="#mapSection">Arena</a></li>
-                        <li><a href="#choose__Champion">Campioni</a></li>
-                        <li><a href="#legend">Combatti</a></li>
+                <nav class="navMenu">
+                    <ul class="ulMenu">
+                        <li class="liMenu"><a href="#mappe">Arena</a></li>
+                        <li class="liMenu"><a href="#champion">Campioni</a></li>
+                        <li class="liMenu"><a href="#legend">Combatti</a></li>
                     </ul>
                 </nav>
+                <div class="btn">
+                    <button class="btnOpen"><img src="./assets/iconBurgerMenu.png" alt="img burger menu" class="btnImgOpen"></button>
+                    <button class="btnClose"><img src="./assets/iconXmenu.png" alt="img button close menu" class="btnImgClose"></button>
+                </div>
             </div>
         </div>
     </header>
     <section class="main">
-        <section class="hero">
-           <div class="info__Hero">
-            <img src="./assets/logo.png" alt="logo">
-            <p>League of Legends è un gioco di strategia in cui due squadre di cinque potenti campioni si affrontano per distruggere la base degli avversari. Scegli tra oltre 140 campioni ed effettua giocate epiche, elimina i nemici e abbatti le torri mentre lotti per la vittoria.</p>
-            <a href=""><button class="buttonPlay">Inizia a giocare</button></a>
-           </div>
-           <div class="video__Hero">
-            <video autoplay mute loop class="videoHero">
-                <source src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm" type="video/webm">
-              Your browser does not support the video tag.
-            </video>
-           </div>
+        <section class="containerHero">
+            <section class="hero">
+                <div class="info__Hero">
+                 <img src="./assets/logo.png" alt="logo">
+                 <p>League of Legends è un gioco di strategia in cui due squadre di cinque potenti campioni si affrontano per distruggere la base degli avversari. Scegli tra oltre 140 campioni ed effettua giocate epiche, elimina i nemici e abbatti le torri mentre lotti per la vittoria.</p>
+                 <a href=""><button class="buttonPlay">Inizia a giocare</button></a>
+                </div>
+                <div class="video__Hero">
+                 <video autoplay mute loop class="videoHero">
+                     <source src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm" type="video/webm">
+                   Your browser does not support the video tag.
+                 </video>
+                </div>
+             </section>
         </section>
-        <section class="mapSection" id="mapSection">
+        <section class="mapSection" id="mappe">
             <span class="span1">PREPARATI A</span>
             <span class="span2">COMBATTERE</span>
             <div class="maps">
@@ -65,22 +71,45 @@
                 </div>
             </div>
         </section>
-        <section class="choose__Champion" id="choose__Champion">
+        <section class="choose__Champion" id="champion">
             <span class="span1">SCEGLI IL TUO</span>
             <span class="span2">CAMPIONE</span>
             <span class="span3">Lanciati nella mischia, a supporto dei tuoi compagni o trova una via di mezzo.</span>
-            <div class="nav__Champion">
-                <ul>
-                    <li class="assassini">COMBATTENTI</li>
-                    <li class="combattenti">ASSASSINI</li>
-                    <li class="maghi">MAGHI</li>
-                    <li class="tiratori">TIRATORI</li>
-                    <li class="supporti">SUPPORTI</li>
-                    <li class="supporti">TANK</li>
+            <div class="navChampion">
+                <ul class="navChampionUl">
+                    <li class="navChampionLi"><button class="btnFighter">COMBATTENTI</button></li>
+                    <li class="navChampionLi"><button class="btnAssassin">ASSASSINI</button></li>
+                    <li class="navChampionLi"><button class="btnMage">MAGHI</button></li>
+                    <li class="navChampionLi"><button class="btnMarksman">TIRATORI</button></li>
+                    <li class="navChampionLi"><button class="btnSupport">SUPPORT</button></li>
+                    <li class="navChampionLi"><button class="btnTank">TANK</button></li>
                 </ul>
+                <div class="imgScroll">
+                    <img src="./assets/scroll.png" alt="">
+                </div>
+            </div>
+           <div class="sectionChampion">
+                <div class="fighter cardChampion">
+                    <img src="./assets/Fighter_icon.webp" alt="icon fighter" class="imgClass">
+                </div>
+                <div class="assassin cardChampion">
+                    <img src="./assets/Slayer_icon.webp" alt="icon assassin" class="imgClass">
+                </div>
+                <div class="mage cardChampion">
+                    <img src="./assets/Mage_icon.webp" alt="icon mage" class="imgClass">
+                </div>
+                <div class="marksman cardChampion">
+                    <img src="./assets/Marksman_icon.webp" alt="icon marksman" class="imgClass">
+                </div>
+                <div class="support cardChampion">
+                    <img src="./assets/Controller_icon.webp" alt="icon support" class="imgClass">
+                </div>
+                <div class="tank cardChampion">
+                    <img src="./assets/Tank_icon.webp" alt="icon tank" class="imgClass">
+                </div>
             </div>
         </section>
-        <section class="legend" id="legend">
+         <section class="legend" id="legend">
             <div class="legend__Image">
                 <span class="span1">PREPARATI</span>
                 <img src="./assets/legendimd.png" alt="legend img" class="imgLegend">
